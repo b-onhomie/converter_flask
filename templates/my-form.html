@@ -1,0 +1,15 @@
+<style>
+  #textareaid { height:300px; width:400px; }
+</style>
+<form method="POST">
+	<textarea id="textareaid" name="text">
+</textarea>
+	<input type="submit">
+
+  <textarea id = "textareaid" name = "text">
+      {% if processed_text %}
+  {{ processed_text }}
+  {% endif %}
+</textarea>
+
+</form>
