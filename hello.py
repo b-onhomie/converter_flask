@@ -36,6 +36,10 @@ def my_form():
 @app.route('/classes', methods = ['POST'])
 def my_form_post():
     text = request.form['text']
+    # get rid of newlines.
+    text = text.replace("\r","")
+    split_text = text.split('\n')
+    text = "".join(split_text)
     processed_text = ' '
 
     # get the names of your divs
