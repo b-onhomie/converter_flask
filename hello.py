@@ -60,3 +60,6 @@ def my_form_post():
 
     processed_text = ncs
     return render_template('my-form.html',processed_text=processed_text)
+
+if __name__ == '__main__':
+  app.run(threaded=True, port=5000)
