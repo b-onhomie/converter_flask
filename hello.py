@@ -93,8 +93,13 @@ def my_form_post():
     # get the values inside of the curly braces 
     result = re.findall(r"{[^{}]*}",text)
     p_result = []
-    for val in result:
-        p_result.append(val[1:-1])
+    for x in range(0,len(result)):
+        if "-webkit-scrollbar" in p_result1[x]:
+          pattern1=re.compile(";")
+          result1=pattern1.sub("!important;",result[x])
+          p_result.append(result1[1:-1])
+        else:
+          p_result.append(result[x][1:-1])
 
     newclasses = []
     ncs = ""
